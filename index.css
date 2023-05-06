@@ -1,0 +1,182 @@
+* {
+  padding: 0;
+  margin: 0;
+}
+
+:root {
+  --elColor: rgb(233, 233, 13);
+  --textColor: rgb(212, 230, 20);
+  --bgColor: #000;
+  --white: hsl(0, 0%, 100%);
+}
+
+.bodycover {
+  background: var(--bgColor);
+  color: var(--white);
+}
+
+.header {
+  height: 100vh;
+  /* position: relative; */
+  border-bottom: 2px solid var(--textColor);
+}
+
+.animateH {
+  animation: scroll 3s linear;
+  /* color: rgb(233, 233, 13); */
+}
+.animateSqr {
+  animation: roll 3s linear;
+}
+@keyframes scroll {
+  from {
+    height: 100vh;
+  }
+  to {
+    height: 20vh;
+  }
+}
+
+.sqr {
+  padding: 2rem;
+  width: 30px;
+  height: 30px;
+  background-color: aqua;
+  animation: roll 3s linear;
+  position: absolute;
+  left: 0px;
+  bottom: 0px;
+}
+
+@keyframes roll {
+  0% {
+    background-color: red;
+    left: 0px;
+    bottom: 0px;
+    transform: rotate(0deg);
+  }
+  25% {
+    background-color: yellow;
+    left: 200px;
+    bottom: 0px;
+    transform: rotate(20deg);
+  }
+  50% {
+    background-color: blue;
+    left: 300px;
+    bottom: 0px;
+    transform: rotate(70deg);
+  }
+  75% {
+    background-color: green;
+    left: 400px;
+    bottom: 0px;
+    transform: rotate(100deg);
+  }
+  100% {
+    background-color: red;
+    left: 500px;
+    bottom: 0px;
+    transform: rotate(180deg);
+  }
+}
+
+.navbar {
+  /* background-color: rgb(238, 176, 19); */
+  display: flex;
+  justify-content: space-between;
+  padding: 2rem 0.5rem;
+  border-bottom: 2px solid var(--textColor);
+  margin-bottom: 2rem;
+}
+
+.logo {
+  color: var(--white);
+  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+    "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+}
+.logo span {
+  font-style: italic;
+  color: var(--textColor);
+  font-size: small;
+}
+
+.openmenu {
+  /* display: none; */
+  width: 10%;
+  background: var(--white);
+}
+.closemenu {
+  display: none;
+}
+.list {
+  background-color: green;
+  display: none;
+}
+
+.list ul {
+  list-style: none;
+  display: flex;
+  justify-content: space-between;
+}
+
+.list ul li {
+  padding: 0.5rem;
+  /* margin-right: 0.3rem; */
+}
+
+.list ul li a {
+  padding: 0.5rem;
+  margin-right: 0.3rem;
+  /* background-color: aqua; */
+  color: hsl(0, 0%, 100%);
+}
+.list ul li a:hover {
+  background-color: aliceblue;
+  border-bottom: 2px solid yellowgreen;
+}
+
+.list ul li a:focus {
+  color: rgb(196, 54, 78);
+  background-color: blue;
+}
+a {
+  /* background-color: chartreuse; */
+  padding: 0.5rem;
+}
+
+.list ul li:focus {
+  background-color: blue;
+}
+.list ul a {
+  text-decoration: none;
+}
+
+main {
+  padding: 1.2rem;
+}
+
+.home {
+  text-align: center;
+  margin-bottom: 2rem;
+}
+.home p {
+  line-height: 1.2rem;
+}
+
+.projects {
+  text-align: center;
+}
+
+.projects h1 {
+  text-align: left;
+  margin-bottom: 1rem;
+}
+
+.about {
+  text-align: center;
+}
+.about p {
+  margin-bottom: 1rem;
+  line-height: 1.5rem;
+}

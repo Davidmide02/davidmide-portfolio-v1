@@ -29,16 +29,7 @@
           />
         </nav>
 
-        <section class="home" id="home">
-          <h1 id="name"></h1>
-          <!-- <p id="para">
-            A critical thinker and problem Solver, who use technology to build
-            and create values that makes life easier with the zeal to learn as
-            technology keeps evolving.
-          </p> -->
-        </section>
-
-        <button>Take a tour</button>
+        <!-- <button>Take a tour</button> -->
         <div class="list">
           <ul>
             <li><a href="#home">Home</a></li>
@@ -47,30 +38,31 @@
             <li><a href="#contact">Contact</a></li>
           </ul>
         </div>
-        <!-- </div> -->
-
-        <!-- <div class="sqr"></div> -->
       </header>
 
       <main>
-        <section class="projects">
-          <h1>Projects</h1>
+        <section class="home" id="section1">
+          <div class="img-text">
+            <img src="./assets/OEMBZ20.jpg" class="home-img" alt="img" />
 
-          <div class="card-container">
-            <div class="card">
-              <img src="" alt="project" class="pic" />
-              <h4 class="title">Title:</h4>
-              <p class="descr">Description:</p>
+            <div class="home-text">
+              <h1 id="name"></h1>
+              <p id="para"></p>
             </div>
+          </div>
+
+          <div class="btns">
+            <button>Hire me</button>
+            <button>Resume</button>
           </div>
         </section>
 
-        <section class="about">
-          <h1>About</h1>
+        <section class="about animate-area">
+          <h1 id="section2">About</h1>
           <p>
             I am Adenusi David Olamide, a Software Engineer, creating an
             attractive and User friendly Interface(UI), that allow Users to
-            seemlessly interact with ideas and solutions. In other to keep
+            seamlessly interact with ideas and solutions. In other to keep
             delivering a topnotch UI I deem it fit to always relearn, learn and
             unlearn.
           </p>
@@ -81,7 +73,6 @@
             expose me to a couple of soft skills like Team work, commmunication,
             human relation , time management among others. You check some of my
             Volunteering activities, certificates and awards here
-            <button>view</button>
           </p>
 
           <div class="techskil">image in svg's</div>
@@ -89,6 +80,17 @@
           <div class="certificate">
             certificates
             <p>display certificate here with auto image slider</p>
+          </div>
+        </section>
+        <section class="projects">
+          <h1>Projects</h1>
+
+          <div class="card-container">
+            <div class="card">
+              <img src="" alt="project" class="pic" />
+              <h4 class="title">Title:</h4>
+              <p class="descr">Description:</p>
+            </div>
           </div>
         </section>
 
@@ -107,5 +109,10 @@
 
       <footer>footer</footer>
     </section>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.5/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.5/ScrollToPlugin.min.js"></script>
+    <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.5/gsap.min.js"></script> -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.5/ScrollTrigger.min.js"></script>
+    <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.5/Observer.min.js"></script> -->
   </body>
 </html>

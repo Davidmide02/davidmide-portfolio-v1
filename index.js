@@ -45,12 +45,41 @@ typewriter
 //   });
 // });
 
-
 // animation for about page
 gsap.registerPlugin(ScrollTrigger);
-gsap.to(".animate-area", {
-  x: 100,
-  rotation:27,
+gsap.from(".leftani", {
+  scrollTrigger: {
+    trigger: ".leftani",
+    toggleActions: "play none play reverse",
+  },
+  stagger: 1,
+  x: "-100px",
+  // backgroundColor:'green',
   opacity: 0,
   duration: 2,
+});
+
+gsap.from(".img", {
+  scrollTrigger: {
+    trigger: ".img",
+  },
+  x: "-500px",
+  opacity: 0,
+  transition: 1,
+  // backgroundColor:'yellow',
+  duration: 0.31,
+  stagger: 1,
+});
+
+gsap.to(".home", {
+  scrollTrigger: {
+    trigger: ".home",
+    toggleActions: "play none restart restart",
+  },
+  y: "-10px",
+  // opacity: 0,
+  transition: 1,
+  backgroundColor:'yellow',
+  duration: 0.31
+  // stagger: 1,
 });

@@ -10,6 +10,13 @@
       href="./assets/Davidmide official.png"
       type="image/x-icon"
     />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+      integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
     <link rel="stylesheet" href="./index.css" />
     <script src="https://unpkg.com/typewriter-effect@latest/dist/core.js"></script>
     <script defer src="./index.js"></script>
@@ -56,10 +63,10 @@
           <div class="roll"></div>
         </section>
 
-        <section class="about animate-area">
+        <section class="about">
           <h1 id="section2">About</h1>
 
-          <div class="about-me">
+          <div class="about-me leftani">
             <h2>About me</h2>
 
             <p>
@@ -72,7 +79,7 @@
             </p>
           </div>
 
-          <div class="about-me">
+          <div class="about-me leftani">
             <h2>Volunteering</h2>
             <!-- <p>
               Aside Tech I do engage in the other humanitarian
@@ -99,49 +106,50 @@
             </ul>
           </div>
 
-          <div class="techskil">
-            image in svgs skills
-            <div class="img">
-              <img src="" alt="" />
-              <p>Html</p>
-            </div>
+          <div class="techskill-con">
+            <h2>skills</h2>
+            <div class="techskill">
+              <div class="img">
+                <img src="./assets/html-1.svg" alt="logo" />
+                <p>Html</p>
+              </div>
 
-            <div class="img">
-              <img src="" alt="" />
-              <p>CSS</p>
-            </div>
+              <div class="img">
+                <img src="./assets/css-3.svg" alt="logo" />
+                <p>CSS</p>
+              </div>
 
-            <div class="img">
-              <img src="" alt="" />
-              <p>JavaScript</p>
-            </div>
+              <div class="img">
+                <img src="./assets/logo-javascript.svg" alt="logo" />
+                <p>JavaScript</p>
+              </div>
 
-            <div class="img">
-              <img src="" alt="" />
-              <p>Reactjs</p>
-            </div>
+              <div class="img">
+                <img src="./assets/react-2.svg" alt="logo" />
+                <p>Reactjs</p>
+              </div>
 
-            <div class="img">
-              <img src="" alt="" />
-              <p>Git</p>
-            </div>
+              <div class="img">
+                <img src="./assets/git-icon.svg" alt="logo" />
+                <p>Git</p>
+              </div>
 
-            <div class="img">
-              <img src="" alt="" />
-              <p>Tailwindcss</p>
-            </div>
+              <div class="img">
+                <img src="./assets/tailwindcss.svg" alt="logo" />
+                <p>Tailwindcss</p>
+              </div>
 
-            <div class="img">
-              <img src="" alt="" />
-              <p>leafjs</p>
-            </div>
+              <div class="img">
+                <img src="./assets/leaflet-1.svg" alt="logo" />
+                <p>leafletjs</p>
+              </div>
 
-            <div class="img">
-              <img src="" alt="" />
-              <p>GSAP</p>
+              <div class="img">
+                <img src="./assets/gsap-greensock.svg" alt="logo" />
+                <p>Gsap</p>
+              </div>
             </div>
           </div>
-
           <div class="certificate">
             certificates
             <p>display certificate here with auto image slider</p>
@@ -209,6 +217,14 @@
               </p>
             </div>
           </div>
+
+          <div class="card-container">
+            <img src="./assets/huddle.jpg" alt="project" class="pic" />
+            <div class="card">
+              <h4 class="title">Title: Huddles landing page</h4>
+              <p class="descr">Description: Landing page with curve sections</p>
+            </div>
+          </div>
         </section>
 
         <section class="skills">
@@ -224,7 +240,12 @@
         </section>
       </main>
 
-      <footer>footer facebook github twitter linkedIn Frontendmentor</footer>
+      <footer>
+        <i class="fa-brands fa-github fa-beat-fade"></i>
+        <i class="fa-brands fa-twitter fa-beat-fade"></i>
+        <i class="fa-brands fa-linkedin fa-beat-fade"></i>
+        footer facebook github twitter linkedIn Frontendmentor
+      </footer>
     </section>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.5/gsap.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.5/ScrollToPlugin.min.js"></script>

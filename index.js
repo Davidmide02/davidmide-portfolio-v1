@@ -35,7 +35,7 @@ typewriter
   .pauseFor(300)
   .deleteAll(10)
   .start();
-
+// for smooth scrolling between pages
 // document.querySelectorAll("ul li").forEach((btn, index) => {
 //   btn.addEventListener("click", () => {
 //     gsap.to(window, {
@@ -44,13 +44,13 @@ typewriter
 //     });
 //   });
 // });
+
+
+// animation for about page
 gsap.registerPlugin(ScrollTrigger);
-gsap.to( ".animate-area",{
-
-  x:100,
-  // rotation:27,
-  opacity:0,
-  duration:2,
-}
-
-)
+gsap.to(".animate-area", {
+  x: 100,
+  rotation:27,
+  opacity: 0,
+  duration: 2,
+});

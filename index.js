@@ -4,7 +4,7 @@ const write = new Typewriter(nameD, {
   delay: 20,
 });
 
-write.typeString("I'm Davimide.").start();
+write.typeString("I'm Davidmide.").start();
 
 //   another typewriter effect
 let para = document.getElementById("para");
@@ -62,6 +62,8 @@ gsap.from(".leftani", {
 gsap.from(".img", {
   scrollTrigger: {
     trigger: ".img",
+    toggleActions: "play none reverse reverse",
+
   },
   x: "-500px",
   opacity: 0,
@@ -79,7 +81,7 @@ gsap.to(".home", {
   y: "-10px",
   // opacity: 0,
   transition: 1,
-  backgroundColor:'yellow',
-  duration: 0.31
+  // backgroundColor: "yellow",
+  duration: 0.31,
   // stagger: 1,
 });

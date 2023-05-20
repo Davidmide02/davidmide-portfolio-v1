@@ -63,12 +63,10 @@ gsap.from(".img", {
   scrollTrigger: {
     trigger: ".img",
     toggleActions: "play none reverse reverse",
-
   },
   x: "-500px",
   opacity: 0,
   transition: 1,
-  // backgroundColor:'yellow',
   duration: 0.31,
   stagger: 1,
 });

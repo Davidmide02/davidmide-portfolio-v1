@@ -4,6 +4,39 @@
   box-sizing: border-box;
 }
 
+.menu-container {
+  display: inline-block;
+  cursor: pointer;
+  z-index: 1;
+}
+
+.bar1,
+.bar2,
+.bar3 {
+  width: 2.187rem;
+  height: 5px;
+  background-color: var(--textColor);
+  margin: 6px 0;
+  transition: 0.4s;
+}
+
+/* Rotate first bar */
+.change .bar1 {
+  -webkit-transform: rotate(-45deg) translate(-9px, 6px);
+  transform: rotate(-45deg) translate(-9px, 6px);
+}
+
+/* Fade out the second bar */
+.change .bar2 {
+  opacity: 0;
+}
+
+/* Rotate last bar */
+.change .bar3 {
+  -webkit-transform: rotate(45deg) translate(-8px, -8px);
+  transform: rotate(45deg) translate(-8px, -8px);
+}
+
 :root {
   --elColor: rgb(233, 233, 13);
   --textColor: rgb(212, 230, 20);
@@ -22,12 +55,19 @@
   border-bottom: 2px solid var(--textColor);
   text-align: center;
   margin-bottom: 2rem;
+  /* position: fixed; */
+  background-color: inherit;
+  /* width: 100%; */
+  /* background-color: red; */
 }
 
 .navbar {
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
+  /* justify-content: space-between; */
   padding: 2rem 0.5rem;
+  position: relative;
+
 }
 
 .logo {
@@ -48,25 +88,23 @@
   margin-right: 1rem;
 }
 
-.openmenu {
-  width: 10%;
-  background: var(--white);
-}
-.closemenu {
-  display: none;
-}
 .list {
   display: none;
+  border: 2px solid var(--white);
+  position: absolute;
+  background-color: var(--bgColor);
+  width: 100%;
 }
 
 .list ul {
   list-style: none;
   display: flex;
   justify-content: space-between;
+  flex-direction: column;
 }
 
 .list ul li {
-  padding: 0.5rem;
+  padding: 1.5rem;
 }
 
 .list ul li a {
@@ -77,11 +115,13 @@
   padding: 1rem;
   text-decoration: none;
 }
+
 .list ul li a:hover {
   border-bottom: 4px solid var(--textColor);
 }
 
-.list ul li a:focus {
+/* .list ul li a: */
+.active {
   color: var(--white);
   color: var(--bgColor);
   background-color: var(--textColor);
@@ -92,7 +132,6 @@ main {
   padding: 1.2rem;
 }
 
-
 section h1 {
   margin-bottom: 1rem;
   font-size: 2rem;
@@ -102,7 +141,6 @@ section h1 {
   text-align: center;
   margin-bottom: 2rem;
   padding: 1rem;
-
 }
 
 .home-img {
@@ -115,7 +153,7 @@ section h1 {
 }
 .home-text .text {
   height: 30vh;
-  border: 2px solid red;
+  /* border: 2px solid red; */
 }
 
 .home p {
@@ -153,11 +191,7 @@ section h1 {
 .about {
   text-align: center;
   margin-top: 4rem;
-  
 }
-
-
-
 
 .about-me {
   background-color: rgb(6, 6, 24);
@@ -210,14 +244,11 @@ section h1 {
   font-weight: 800;
   text-decoration: none;
   color: var(--bgColor);
-
 }
 
 .link-btn button:hover {
   background-color: gainsboro;
 }
-
-
 
 .download {
   background-color: inherit;
@@ -231,10 +262,10 @@ section h1 {
 }
 
 .card-container {
- border-radius: 1rem;
+  border-radius: 1rem;
   margin-bottom: 1rem;
   background-color: rgb(13, 13, 44);
-  padding:2rem 1rem;
+  padding: 2rem 1rem;
 }
 
 .card-container img {
@@ -257,7 +288,6 @@ section h1 {
   justify-content: center;
   align-items: center;
   margin-left: 0.5rem;
-
 }
 
 .img img {
@@ -268,10 +298,8 @@ section h1 {
 }
 
 .contact {
-
   text-align: center;
   margin-top: 4rem;
- 
 }
 .contact form {
   display: flex;
@@ -284,7 +312,6 @@ form textarea {
   font-size: 1.2rem;
 }
 
-
 .contact form button {
   margin-top: 1rem;
   padding: 0.5rem 4rem;
@@ -294,8 +321,8 @@ form textarea {
   background-color: var(--textColor);
 }
 
-.contact form button:hover{
-  background-color: yellow
+.contact form button:hover {
+  background-color: yellow;
 }
 
 footer {
@@ -318,52 +345,78 @@ footer {
   width: 1.2rem;
 }
 
-.copy{
+.copy {
   margin-top: 2rem;
   color: var(--white);
   font-weight: 500;
 }
 
-@media only screen  and (min-width:768px){
-  
-.bodycover{
-  font-size: 1.5rem;
+.openlist {
+  display: block;
 }
-  .openmenu{
+
+@media only screen and (min-width: 768px) {
+  .bodycover {
+    font-size: 1.2rem;
+  }
+  .menu-container {
     display: none;
   }
 
-  .list{
+
+  .list {
     display: block;
+    position: relative;
+    border: none;
   }
-/* when the internet is up check this */
-  .home-img{
+
+  .list ul {
+
+    flex-direction: row;
+  }
+
+  
+
+  /* .list ul li a {
+    padding: 0.5rem;
+    margin-right: 0.3rem;
+    color: hsl(0, 0%, 100%);
+    font-weight: 900;
+    padding: 1rem;
+    text-decoration: none;
+  } */
+  /* .list ul li a:hover {
+    border-bottom: 4px solid var(--textColor);
+  } */
+  /* when the internet is up check this */
+  .home-img {
     width: 40%;
   }
 
-  .home-text{
-    width: 50%;
+  .home-text {
+    width: 40%;
 
     /* border: 2px solid red; */
   }
-  .home-text .text{
-    /* width: 70%; */
-  }
+  /* .home-text .text { */
+  /* width: 70%; */
+  /* } */
 
-  .img-text{
+  .img-text {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    flex-direction: row-reverse;
   }
 
-  .btns{
+  .btns {
     flex-direction: row;
     justify-content: space-between;
   }
   .btns button {
     width: 40%;
   }
-  .flex{
+  .flex {
     display: flex;
     justify-content: space-evenly;
   }
@@ -372,16 +425,14 @@ footer {
     width: 30%;
   }
 
-  .grid{
+  .grid {
     display: grid;
-    grid-template-columns: repeat(3,30%);
+    grid-template-columns: repeat(3, 30%);
     gap: 1rem;
     justify-content: center;
   }
-form textarea{
-  width: 60%;
+  form textarea {
+    width: 60%;
+  }
+  /* .contact form button */
 }
-/* .contact form button */
-}
-
-

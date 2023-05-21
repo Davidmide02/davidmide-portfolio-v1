@@ -29,31 +29,31 @@
             <img src="./assets/Davidmide official.png" alt="logo" class="lo" />
             <h1>David<span>mide</span></h1>
           </div>
-
-          <!-- change open icon -->
-          <img src="./assets/icon-menu.svg" alt="icon-menu" class="openmenu" />
-          <img
-            src="./assets/icon-menu-close.svg"
-            alt="icon"
-            class="closemenu"
-          />
+        
+          <div class="menu-container" onclick="openMenu(this)">
+            <div class="bar1"></div>
+            <div class="bar2"></div>
+            <div class="bar3"></div>
+          </div>
 
           <div class="list">
             <ul>
-              <li><a href="#home">Home</a></li>
-              <li><a href="#project">Project</a></li>
-              <li><a href="#about">About</a></li>
-              <li><a href="#contact">Contact</a></li>
+              <li><a href="#section1" class="act">Home</a></li>
+              <li><a href="#section2" class="act">About</a></li>
+              <li><a href="#section3" class="act">Projects</a></li>
+              <li><a href="#section4" class="act">Contact</a></li>
             </ul>
           </div>
         </nav>
-      </header>
 
+        
+      </header>
+    
       <main>
         <section class="home" id="section1">
           <div class="img-text">
             <img
-              src="./assets/Davidmide official.png"
+              src="./assets/me.jpg"
               class="home-img"
               alt="img"
             />
@@ -65,7 +65,7 @@
               </div>
 
               <div class="btns">
-                <button class="hire"><a href="">Hire me</a></button>
+                <button class="hire"><a href="#section4">Hire me</a></button>
                 <button class="resume">
                   <a
                     href="./assets/Tech Resume.pdf"
@@ -79,7 +79,7 @@
           </div>
         </section>
 
-        <section class="about">
+        <section class="about" id="section2">
           <h1 id="section2">About</h1>
 
         <div class="flex">
@@ -176,7 +176,7 @@
             <p>display certificate here with auto image slider</p>
           </div> -->
         </section>
-       <section class="projects">
+       <section class="projects" id="section3">
           <h1>Projects</h1>
 
          <div class="grid">
@@ -340,7 +340,7 @@
           <h1>skills/ certificate/ award outside tech</h1>
         </section> -->
 
-        <section class="contact">
+        <section class="contact" id="section4">
           <h1>Contact</h1>
           <form>
             <textarea
@@ -361,11 +361,22 @@
 
       <footer>
       <div class="social">
-
-        <i class="fa-brands fa-github"></i>
-        <i class="fa-brands fa-twitter"></i>
-        <i class="fa-brands fa-linkedin"></i>
-        <img src="./assets/frontendmentor-logo.svg" alt="img" class="foot-img">
+        <a href="">
+          <i class="fa-brands fa-github"></i>
+        </a>
+        <a href="">
+          <i class="fa-brands fa-twitter"></i>
+        </a>
+          <a href="">
+            <i class="fa-brands fa-linkedin"></i>
+          </a>
+          <a href="">
+            <i class="fa-brands fa-whatsapp"></i>
+          </a>
+          
+          <a href="">
+           <img src="./assets/frontendmentor-logo.svg" alt="img" class="foot-img">
+          </a>
       </div>
 
         <div class="copy">

@@ -1,42 +1,40 @@
-// const nameD = document.getElementById("name");
-// const write = new Typewriter(nameD, {
-//   loop: false,
-//   delay: 20,
-// });
+const nameD = document.getElementById("name");
+const write = new Typewriter(nameD, {
+  loop: false,
+  delay: 20,
+});
 
-// write.typeString("I'm Davidmide.").start();
+write.typeString("I'm Davidmide.").start();
 
-//   another typewriter effect
-// let para = document.getElementById("para");
+// another typewriter effect
+let para = document.getElementById("para");
 
-// var typewriter = new Typewriter(para, {
-//   loop: true,
-//   delay: 75,
-// });
+var typewriter = new Typewriter(para, {
+  loop: true,
+  delay: 75,
+});
 
-// typewriter
-//   .pauseFor(300)
-//   .typeString(
-//     "  <p style='color:rgb(212, 230, 20)'>Welcome to my portfolio site ❤👌</p>"
-//   )
-//   .deleteAll()
-//   .pauseFor(300)
-//   .typeString(
-//     "<p>A <span style='color:rgb(212, 230, 20)' >Critical Thinker</span> and <span style='color:rgb(212, 230, 20)' >Problem Solver</sapn>,</p>"
-//   )
-//   .pauseFor(300)
-//   .typeString("who uses technology to build")
-//   .pauseFor(300)
-//   .typeString(
-//     " <span >and create values that make life easier with the zeal to <span style='color:rgb(212, 230, 20)'> learn, relearn and unlearn as</span>"
-//   )
-//   .pauseFor(300)
-//   .typeString(" technology keeps evolving.")
-//   .pauseFor(300)
-//   .deleteAll(10)
-//   .start();
-
-// uncoment from here
+typewriter
+  .pauseFor(300)
+  .typeString(
+    "  <p style='color:rgb(212, 230, 20)'>Welcome to my portfolio site ❤👌</p>"
+  )
+  .deleteAll()
+  .pauseFor(300)
+  .typeString(
+    "<p>A <span style='color:rgb(212, 230, 20)' >Critical Thinker</span> and <span style='color:rgb(212, 230, 20)' >Problem Solver</sapn>,</p>"
+  )
+  .pauseFor(300)
+  .typeString("<p>who uses technology to build and create values that</p>")
+  .pauseFor(300)
+  .typeString(
+    " <p> make life easier with the zeal to <span style='color:rgb(212, 230, 20)'> learn, relearn and unlearn</span> as</p>"
+  )
+  .pauseFor(300)
+  .typeString("<p>technology keeps evolving.</p>")
+  .pauseFor(300)
+  .deleteAll(10)
+  .start();
 
 // for smooth scrolling between pages
 // document.querySelectorAll("ul li").forEach((btn, index) => {
@@ -57,7 +55,6 @@ gsap.from(".leftani", {
   },
   stagger: 1,
   x: "-100px",
-  // backgroundColor:'green',
   opacity: 0,
   duration: 2,
 });
@@ -79,12 +76,8 @@ gsap.to(".home", {
     trigger: ".home",
     toggleActions: "play none restart restart",
   },
-  // y: "-10px",
-  // opacity: 0,
   transition: 1,
-  // backgroundColor: "yellow",
   duration: 0.31,
-  // stagger: 1,
 });
 
 const active = document.querySelectorAll("ul a");
@@ -93,43 +86,47 @@ console.log(active);
 
 active.forEach((link) =>
   link.addEventListener("click", () => {
+    active.forEach((a) => a.classList.remove("active"));
     activeLink(link);
   })
 );
 
 function activeLink(link) {
-  link.classList.toggle("active");
-  // if (link.classList.includes('active')) {
-
-  //   link.classList.remove('active')
-
-  // }else {
-
-  //   link.classList.add('active')
-  // }
+  link.classList.add("active");
 }
 
 let isOpenNav = false;
-
 function openMenu(x) {
   const list = document.querySelector(".list");
-  
   if (!isOpenNav) {
-    isOpenNav=true;
-    console.log(isOpenNav);
-    x.classList.add('change')
-    list.classList.add('openlist')
-    
-  } else{
-    x.classList.remove('change');
-    isOpenNav=false;
-    console.log(isOpenNav);
-    list.classList.remove('openlist')
-
-
+    isOpenNav = true;
+    x.classList.add("change");
+    list.classList.add("openlist");
+  } else {
+    x.classList.remove("change");
+    isOpenNav = false;
+    list.classList.remove("openlist");
   }
-  // x.classList.toggle("change");
-  // list.classList.add("openlist");
-  // list.setAttribute("display", "block");
-  // console.log(list);
+
 }
+
+const section = document.querySelectorAll(".section");
+window.onscroll = () => {
+  // console.log(active);
+  section.forEach((sec) => {
+    const top = window.scrollY;
+    const offset = sec.offsetTop-200;
+    const height = sec.offsetHeight;
+    const id = sec.getAttribute("id");
+    // console.log(id);
+    if (top >= offset && top < offset + height) {
+      active.forEach((link) => {
+        // console.log(link);
+        link.classList.remove("active");
+        document.querySelector("ul a[href*="+ id +"]").classList.add("active");
+      });
+    }
+  });
+};
+//
+// "ul a[href*='+id+']"

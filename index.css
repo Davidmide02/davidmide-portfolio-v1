@@ -49,25 +49,26 @@
 .bodycover {
   background: var(--bgColor);
   color: var(--white);
+  /* height: calc(); */
 }
 
 .header {
   border-bottom: 2px solid var(--textColor);
   text-align: center;
   margin-bottom: 2rem;
-  /* position: fixed; */
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 20vh;
   background-color: inherit;
-  /* width: 100%; */
-  /* background-color: red; */
+  z-index: 1;
 }
 
 .navbar {
   display: flex;
   justify-content: center;
-  /* justify-content: space-between; */
   padding: 2rem 0.5rem;
   position: relative;
-
 }
 
 .logo {
@@ -80,7 +81,7 @@
 .logo span {
   font-style: italic;
   color: var(--textColor);
-  font-size: small;
+  /* font-size: small; */
 }
 .logo img {
   width: 8%;
@@ -101,6 +102,7 @@
   display: flex;
   justify-content: space-between;
   flex-direction: column;
+  transition: 13s;
 }
 
 .list ul li {
@@ -118,6 +120,7 @@
 
 .list ul li a:hover {
   border-bottom: 4px solid var(--textColor);
+  transition: 0.2s;
 }
 
 /* .list ul li a: */
@@ -141,19 +144,25 @@ section h1 {
   text-align: center;
   margin-bottom: 2rem;
   padding: 1rem;
+  /* background-image: linear-gradient(right, rgb(5, 5, 27), rgb(212, 230, 20)); */
 }
 
 .home-img {
-  width: 70%;
+  width: 60%;
+  /* height: 30rem; */
   border-radius: 1rem;
 }
 .home-text {
   margin-top: 2rem;
-  border: 2px solid white;
 }
 .home-text .text {
   height: 30vh;
-  /* border: 2px solid red; */
+}
+.text #name{
+  margin-bottom: 1.5rem;
+}
+.text h1, .text p{
+line-height: 1.5rem;
 }
 
 .home p {
@@ -186,6 +195,7 @@ section h1 {
 .btns .hire:hover,
 .btns .resume:hover {
   background-color: var(--textColor);
+  transition: 0.4s;
 }
 
 .about {
@@ -194,7 +204,8 @@ section h1 {
 }
 
 .about-me {
-  background-color: rgb(6, 6, 24);
+  /* background-color: rgb(6, 6, 24); */
+  background-color: rgb(13, 13, 44);
   padding: 0.5rem 1rem;
   border-radius: 1rem;
   border: 2px solid var(--textColor);
@@ -248,6 +259,7 @@ section h1 {
 
 .link-btn button:hover {
   background-color: gainsboro;
+  transition: 0.4s;
 }
 
 .download {
@@ -323,6 +335,7 @@ form textarea {
 
 .contact form button:hover {
   background-color: yellow;
+  transition: 0.4s;
 }
 
 footer {
@@ -353,6 +366,40 @@ footer {
 
 .openlist {
   display: block;
+  /* transition: 13s; */
+  /* animation: nameA 10s linear 1s normal; */
+}
+@keyframes nameA {
+  /* from{width: 0%; background-color: red}; */
+  /* to{width:100%; background-color: green;} */
+  /* 0%{width: 0%; background-color: green;}
+  50%{width:50%;  background-color: aqua;}
+  100%{width: 100%; background-color: red;} */
+
+  /* 0%   {width:40%;background-color: red;}
+    25%  {background-color: yellow;}
+    50%  {width:100%;background-color: blue;}
+    100% {background-color: green;} */
+}
+.home .social {
+  margin-top: 2rem;
+  padding: 2rem;
+}
+
+.social a {
+  text-decoration: none;
+  /* padding: 0.2rem; */
+  margin-left: 0.3rem;
+  cursor: pointer;
+  color: var(--white);
+}
+.social a:last-child {
+  margin-left: none;
+}
+
+.social a:hover {
+  color: rgb(174, 174, 174);
+  transition: 0.4s;
 }
 
 @media only screen and (min-width: 768px) {
@@ -363,7 +410,6 @@ footer {
     display: none;
   }
 
-
   .list {
     display: block;
     position: relative;
@@ -371,11 +417,8 @@ footer {
   }
 
   .list ul {
-
     flex-direction: row;
   }
-
-  
 
   /* .list ul li a {
     padding: 0.5rem;

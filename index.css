@@ -2,6 +2,20 @@
   padding: 0;
   margin: 0;
   box-sizing: border-box;
+  /* font-family: 'Nunito Sans', sans-serif; */
+font-family: 'Poppins', sans-serif;
+}
+
+:root {
+  --elColor: rgb(233, 233, 13);
+  --textColor: rgb(212, 230, 20);
+  --white: hsl(0, 0%, 100%);
+  --bgColor: rgb(5, 5, 27);
+}
+
+.bodycover {
+  background: var(--bgColor);
+  color: var(--white);
 }
 
 .menu-container {
@@ -37,29 +51,10 @@
   transform: rotate(45deg) translate(-8px, -8px);
 }
 
-:root {
-  --elColor: rgb(233, 233, 13);
-  --textColor: rgb(212, 230, 20);
-
-  --white: hsl(0, 0%, 100%);
-  --bgColor: rgb(5, 5, 27);
-  /* --textColor: rgb(188, 204, 6); */
-}
-
-.bodycover {
-  background: var(--bgColor);
-  color: var(--white);
-  /* height: calc(); */
-}
-
 .header {
   border-bottom: 2px solid var(--textColor);
   text-align: center;
   margin-bottom: 2rem;
-  /* position: fixed; */
-  /* top: 0; */
-  /* left: 0; */
-  /* height: 20vh; */
   background-color: inherit;
   z-index: 1;
 }
@@ -68,7 +63,6 @@
   display: flex;
   justify-content: center;
   padding: 2rem 0.5rem;
-  /* position: relative; */
 }
 
 .logo {
@@ -81,7 +75,6 @@
 .logo span {
   font-style: italic;
   color: var(--textColor);
-  /* font-size: small; */
 }
 .logo img {
   width: 8%;
@@ -102,7 +95,6 @@
   display: flex;
   justify-content: space-between;
   flex-direction: column;
-  /* transition: 13s; */
 }
 
 .list ul li {
@@ -122,8 +114,6 @@
   border-bottom: 4px solid var(--textColor);
   transition: 0.2s;
 }
-
-/* .list ul li a: */
 .active {
   color: var(--white);
   color: var(--bgColor);
@@ -144,7 +134,6 @@ section h1 {
   text-align: center;
   margin-bottom: 2rem;
   padding: 1rem;
-  /* background-image: linear-gradient(right, rgb(5, 5, 27), rgb(212, 230, 20)); */
 }
 
 .home-img {
@@ -205,7 +194,6 @@ section h1 {
 }
 
 .about-me {
-  /* background-color: rgb(6, 6, 24); */
   background-color: rgb(13, 13, 44);
   padding: 0.5rem 1rem;
   border-radius: 1rem;
@@ -319,6 +307,22 @@ section h1 {
   flex-direction: column;
   align-items: center;
 }
+
+form input {
+  
+  padding: 0.5rem 2rem;
+  border: none;
+  outline: none;
+  margin-bottom: 1rem;
+  border-radius: 0.3rem;
+  margin-right: 1rem;
+}
+
+form input:hover,
+form input:focus {
+  outline: 2px solid var(--textColor);
+  outline-offset: 2px;
+}
 form textarea {
   padding: 1rem;
   width: 100%;
@@ -350,11 +354,6 @@ footer {
   flex-direction: column;
 }
 
-/* .fa,.foot-img {
-  padding: 0.2rem;
-  margin-right: 2rem;
-} */
-
 .foot-img {
   width: 1.2rem;
 }
@@ -367,20 +366,6 @@ footer {
 
 .openlist {
   display: block;
-  /* transition: 13s; */
-  /* animation: nameA 10s linear 1s normal; */
-}
-@keyframes nameA {
-  /* from{width: 0%; background-color: red}; */
-  /* to{width:100%; background-color: green;} */
-  /* 0%{width: 0%; background-color: green;}
-  50%{width:50%;  background-color: aqua;}
-  100%{width: 100%; background-color: red;} */
-
-  /* 0%   {width:40%;background-color: red;}
-    25%  {background-color: yellow;}
-    50%  {width:100%;background-color: blue;}
-    100% {background-color: green;} */
 }
 .home .social {
   margin-top: 2rem;
@@ -389,7 +374,6 @@ footer {
 
 .social a {
   text-decoration: none;
-  /* padding: 0.2rem; */
   margin-left: 0.3rem;
   cursor: pointer;
   color: var(--white);
@@ -421,28 +405,6 @@ footer {
     flex-direction: row;
   }
 
-  /* .list ul li a {
-    padding: 0.5rem;
-    margin-right: 0.3rem;
-    color: hsl(0, 0%, 100%);
-    font-weight: 900;
-    padding: 1rem;
-    text-decoration: none;
-  } */
-  /* .list ul li a:hover {
-    border-bottom: 4px solid var(--textColor);
-  } */
-  /* when the internet is up check this */
-  /* .section{
-  height: 80%;
-  border: 2px solid red;
-} */
-
-  /* .section:nth-child(even){
-  background-color: green;
-  border: 2px solid yellow;
-} */
-
   .header {
     position: fixed;
     top: 0;
@@ -452,6 +414,7 @@ footer {
 
   .home-img {
     width: 40%;
+    /* height: 50vh; */
   }
   .section {
     padding-top: 30vh;
@@ -493,5 +456,4 @@ footer {
   form textarea {
     width: 60%;
   }
-  /* .contact form button */
 }

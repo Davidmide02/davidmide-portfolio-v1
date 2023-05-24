@@ -36,16 +36,6 @@ typewriter
   .deleteAll(10)
   .start();
 
-// for smooth scrolling between pages
-// document.querySelectorAll("ul li").forEach((btn, index) => {
-//   btn.addEventListener("click", () => {
-//     gsap.to(window, {
-//       duration: 1,
-//       scrollTo: { y: "#section" + (index + 1), offsetY: 70 },
-//     });
-//   });
-// });
-
 // animation for about page
 gsap.registerPlugin(ScrollTrigger);
 gsap.from(".leftani", {
@@ -80,52 +70,77 @@ gsap.to(".home", {
   duration: 0.31,
 });
 
-const active = document.querySelectorAll("ul a");
+const navLinks = document.querySelectorAll("ul a");
+const list = document.querySelector(".list");
+const menuIcon = document.querySelector('.menu-container')
 
-console.log(active);
 
-active.forEach((link) =>
+// adding active class
+navLinks.forEach((link) =>
   link.addEventListener("click", () => {
-    active.forEach((a) => a.classList.remove("active"));
+    navLinks.forEach((a) => a.classList.remove("active"));
     activeLink(link);
+    list.classList.remove("openlist");
+    console.log(document.querySelector('.menu-container'));
+    menuIcon.classList.remove('change')
+
+
+    
   })
 );
 
 function activeLink(link) {
   link.classList.add("active");
 }
+console.log(menuIcon);
+console.log(menubar);
 
+// to open navbar
 let isOpenNav = false;
-function openMenu(x) {
-  const list = document.querySelector(".list");
-  if (!isOpenNav) {
-    isOpenNav = true;
-    x.classList.add("change");
-    list.classList.add("openlist");
-  } else {
-    x.classList.remove("change");
-    isOpenNav = false;
-    list.classList.remove("openlist");
+menuIcon.addEventListener('click' ,()=> {
+  function name(params) {
+    if (!isOpenNav) {
+      isOpenNav = true;;
+      params.classList.add('change')
+      list.classList.add("openlist");
+    } else {
+      params.classList.remove('change')
+      isOpenNav = false;
+      list.classList.remove("openlist");
+    }    
   }
+  name(menuCon)
+})
 
-}
+// function openMenu(x) {
+//   if (!isOpenNav) {
+//     isOpenNav = true;
+//     x.classList.add("change");
+//     list.classList.add("openlist");
+//   } else {
+//     x.classList.remove("change");
+//     isOpenNav = false;
+//     list.classList.remove("openlist");
+//   }
+// }
 
 const section = document.querySelectorAll(".section");
 window.onscroll = () => {
   // console.log(active);
   section.forEach((sec) => {
     const top = window.scrollY;
-    const offset = sec.offsetTop-200;
+    const offset = sec.offsetTop - 200;
     const height = sec.offsetHeight;
     const id = sec.getAttribute("id");
     // console.log(id);
     if (top >= offset && top < offset + height) {
-      active.forEach((link) => {
-        // console.log(link);
+      navLinks.forEach((link) => {
         link.classList.remove("active");
-        document.querySelector("ul a[href*="+ id +"]").classList.add("active");
+        // selecting element by a href* attr
+        document
+          .querySelector("ul a[href*=" + id + "]")
+          .classList.add("active");
       });
     }
   });
 };
-

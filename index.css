@@ -56,10 +56,10 @@
   border-bottom: 2px solid var(--textColor);
   text-align: center;
   margin-bottom: 2rem;
-  position: fixed;
-  top: 0;
-  left: 0;
-  height: 20vh;
+  /* position: fixed; */
+  /* top: 0; */
+  /* left: 0; */
+  /* height: 20vh; */
   background-color: inherit;
   z-index: 1;
 }
@@ -68,7 +68,7 @@
   display: flex;
   justify-content: center;
   padding: 2rem 0.5rem;
-  position: relative;
+  /* position: relative; */
 }
 
 .logo {
@@ -102,7 +102,7 @@
   display: flex;
   justify-content: space-between;
   flex-direction: column;
-  transition: 13s;
+  /* transition: 13s; */
 }
 
 .list ul li {
@@ -158,11 +158,12 @@ section h1 {
 .home-text .text {
   height: 30vh;
 }
-.text #name{
+.text #name {
   margin-bottom: 1.5rem;
 }
-.text h1, .text p{
-line-height: 1.5rem;
+.text h1,
+.text p {
+  line-height: 1.5rem;
 }
 
 .home p {
@@ -432,18 +433,33 @@ footer {
     border-bottom: 4px solid var(--textColor);
   } */
   /* when the internet is up check this */
+  /* .section{
+  height: 80%;
+  border: 2px solid red;
+} */
+
+  /* .section:nth-child(even){
+  background-color: green;
+  border: 2px solid yellow;
+} */
+
+  .header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+  }
+
   .home-img {
     width: 40%;
+  }
+  .section {
+    padding-top: 30vh;
   }
 
   .home-text {
     width: 40%;
-
-    /* border: 2px solid red; */
   }
-  /* .home-text .text { */
-  /* width: 70%; */
-  /* } */
 
   .img-text {
     display: flex;

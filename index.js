@@ -76,24 +76,18 @@ const menuIcon = document.querySelector('.menu-container')
 
 
 // adding active class
+// hide the navbar
+// change the icon menu if any of the navlink is clicked 
 navLinks.forEach((link) =>
   link.addEventListener("click", () => {
     navLinks.forEach((a) => a.classList.remove("active"));
-    activeLink(link);
+    // activeLink(link);
+    link.classList.add("active");
     list.classList.remove("openlist");
-    console.log(document.querySelector('.menu-container'));
-    menuIcon.classList.remove('change')
-
-
-    
+    menuIcon.classList.remove('change');  
   })
 );
 
-function activeLink(link) {
-  link.classList.add("active");
-}
-console.log(menuIcon);
-console.log(menubar);
 
 // to open navbar
 let isOpenNav = false;
@@ -109,20 +103,9 @@ menuIcon.addEventListener('click' ,()=> {
       list.classList.remove("openlist");
     }    
   }
-  name(menuCon)
+  name(menuIcon)
 })
 
-// function openMenu(x) {
-//   if (!isOpenNav) {
-//     isOpenNav = true;
-//     x.classList.add("change");
-//     list.classList.add("openlist");
-//   } else {
-//     x.classList.remove("change");
-//     isOpenNav = false;
-//     list.classList.remove("openlist");
-//   }
-// }
 
 const section = document.querySelectorAll(".section");
 window.onscroll = () => {
@@ -144,3 +127,22 @@ window.onscroll = () => {
     }
   });
 };
+
+
+
+// function openMenu(x) {
+//   if (!isOpenNav) {
+//     isOpenNav = true;
+//     x.classList.add("change");
+//     list.classList.add("openlist");
+//   } else {
+//     x.classList.remove("change");
+//     isOpenNav = false;
+//     list.classList.remove("openlist");
+//   }
+// }
+
+// function activeLink(link) {
+//   link.classList.add("active");
+// }
+

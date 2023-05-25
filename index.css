@@ -428,13 +428,18 @@ footer {
 
 
   .home-img {
-    width: 40%;
+    width: 30%;
 
   }
 
 
   .home-text {
     width: 40%;
+    margin-top: 0;
+    padding: 1rem;
+  }
+  .home-text .text{
+    height: 25vh;
   }
 
   .img-text {

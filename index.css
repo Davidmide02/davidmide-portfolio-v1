@@ -276,6 +276,7 @@ section h1 {
   margin-bottom: 1rem;
   background-color: rgb(13, 13, 44);
   padding: 2rem 1rem;
+  /* height: 70vh; */
 }
 
 .card-container img {
@@ -306,10 +307,7 @@ section h1 {
 .img {
   font-size: 11px;
 }
-textarea::placeholder{
-  background-color: green;
-  color: red;
-}
+
 
 .contact {
   text-align: center;

@@ -455,15 +455,16 @@ footer {
     width: 30%;
   }
 
- git 
 
   .home-text {
-    width: 40%;
-    margin-top: 0;
+    width: 50%;
+    margin-top:0;
     padding: 1rem;
   }
   .home-text .text {
     height: 35vh;
+    /* width: 100%; */
+
   }
 
   .img-text {

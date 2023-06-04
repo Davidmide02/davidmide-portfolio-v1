@@ -395,6 +395,7 @@ footer {
   text-decoration: none;
   margin-left: 0.3rem;
   cursor: pointer;
+  color: var(--white);
   /* correct the height and width */
   width: 60%;
   height: 20rem;
@@ -508,7 +509,8 @@ footer {
     height: 10vh;
   }
   .link-btn {
-    margin-top: 2rem;
+    padding-top: 1rem;
+    margin-top: 3rem;
   }
   .card-container img {
     width: 60%;

@@ -56,8 +56,8 @@ gsap.from(".img", {
   },
   x: "-500px",
   opacity: 0,
-  transition: 1,
-  duration: 0.31,
+  transition: 0.2,
+  duration: 0.13,
   stagger: 1,
 });
 
@@ -72,54 +72,49 @@ gsap.to(".home", {
 
 const navLinks = document.querySelectorAll("ul a");
 const list = document.querySelector(".list");
-const menuIcon = document.querySelector('.menu-container')
-
+const menuIcon = document.querySelector(".menu-container");
 
 // adding active class
 // hide the navbar
-// change the icon menu if any of the navlink is clicked 
+// change the icon menu if any of the navlink is clicked
 navLinks.forEach((link) =>
   link.addEventListener("click", () => {
     navLinks.forEach((a) => a.classList.remove("active"));
     // activeLink(link);
     link.classList.add("active");
     list.classList.remove("openlist");
-    menuIcon.classList.remove('change');  
+    menuIcon.classList.remove("change");
   })
 );
 
-
 // to open navbar
 let isOpenNav = false;
-menuIcon.addEventListener('click' ,()=> {
+menuIcon.addEventListener("click", () => {
   function name(params) {
     if (!isOpenNav) {
-      isOpenNav = true;;
-      params.classList.add('change')
+      isOpenNav = true;
+      params.classList.add("change");
       list.classList.add("openlist");
     } else {
-      params.classList.remove('change')
+      params.classList.remove("change");
       isOpenNav = false;
       list.classList.remove("openlist");
-    }    
+    }
   }
-  name(menuIcon)
-})
-
+  name(menuIcon);
+});
 
 const section = document.querySelectorAll(".section");
 window.onscroll = () => {
-  // console.log(active);
   section.forEach((sec) => {
     const top = window.scrollY;
     const offset = sec.offsetTop - 200;
     const height = sec.offsetHeight;
     const id = sec.getAttribute("id");
-    // console.log(id);
+  
     if (top >= offset && top < offset + height) {
       navLinks.forEach((link) => {
         link.classList.remove("active");
-        // selecting element by a href* attr
         document
           .querySelector("ul a[href*=" + id + "]")
           .classList.add("active");
@@ -128,8 +123,33 @@ window.onscroll = () => {
   });
 };
 
+const form = document.querySelector("form");
+const errName = document.querySelector("#errName");
+const errEmail = document.querySelector("#errEmail");
+const errText = document.querySelector("#errText");
 
+const input1 = document.querySelector("#inputname").value;
+const input2 = document.querySelector("#email");
+const input3 = document.querySelector("#textArea");
 
+console.log(input1);
+
+form.addEventListener("submit", (e) => {
+  e.preventDefault();
+  if (!input1.value) {
+    errName.innerHTML = "Please enter name";
+    console.log(input1);
+    console.log('error1');
+  } else if (!input3.innerHTML) {
+    errText.innerHTML = "Leave a message";
+  } else if (!input2.innerHTML) {
+    errEmail.innerHTML = "Enter name";
+  } else {
+    errName.innerHTML = "";
+    errEmail.innerHTML = "";
+    errText.innerHTML = "";
+  }
+});
 // function openMenu(x) {
 //   if (!isOpenNav) {
 //     isOpenNav = true;
@@ -145,4 +165,3 @@ window.onscroll = () => {
 // function activeLink(link) {
 //   link.classList.add("active");
 // }
-

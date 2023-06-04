@@ -138,8 +138,8 @@ form.addEventListener("submit", (e) => {
   e.preventDefault();
   if (!input1.value) {
     errName.innerHTML = "Please enter name";
-    console.log(input1);
-    console.log('error1');
+    // console.log(input1);
+    // console.log('error1');
   } else if (!input3.innerHTML) {
     errText.innerHTML = "Leave a message";
   } else if (!input2.innerHTML) {

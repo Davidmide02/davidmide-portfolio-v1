@@ -374,7 +374,7 @@ footer {
 }
 
 .foot-img {
-  width: 1.2rem;
+  width: 2rem;
 }
 
 .copy {
@@ -389,6 +389,9 @@ footer {
 .home .social {
   margin-top: 2rem;
   padding: 2rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .social a {
@@ -396,9 +399,8 @@ footer {
   margin-left: 0.3rem;
   cursor: pointer;
   color: var(--white);
-  /* correct the height and width */
-  width: 60%;
-  height: 20rem;
+  padding: 0.2rem;
+
 }
 .social a:last-child {
   margin-left: none;
@@ -455,16 +457,13 @@ footer {
     width: 30%;
   }
 
-
   .home-text {
     width: 50%;
-    margin-top:0;
+    margin-top: 0;
     padding: 1rem;
   }
   .home-text .text {
     height: 35vh;
-    /* width: 100%; */
-
   }
 
   .img-text {
@@ -517,11 +516,7 @@ footer {
     width: 60%;
     height: 20vh;
   }
-  .social a {
-    /* correct this too */
-    width: 10%;
-    height: 30vh;
-  }
+  
   footer {
     background-repeat: no-repeat;
     background-size: 100%;
